@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ebebeb;
+    color: #333;
+}
+
+header {
+    background-color: darkmagenta;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.task-manager {
+    max-width: 400px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px;
+}
+
+input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 0.5rem;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #c0c0c0;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: darkmagenta;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: darkmagenta;
+    border: 1px solid darkmagenta;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex; /* Flexbox para alinear texto y botones */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: solid 1px #ddd;
+    word-break: break-word; /* Permite dividir texto largo */
+}
+
+/* Texto de la tarea */
+li span {
+    flex-grow: 1; /* Ocupar todo el espacio disponible */
+    margin-right: 10px; /* Espacio entre texto y botones */
+}
+
+/* Botones */
+.complete-btn, .delete-btn {
+    width: 35px; /* Ancho fijo */
+    height: 35px; /* Altura fija */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border: none;
+    background-color: darkmagenta; /* Fondo morado */
+    color: white; /* Texto blanco */
+}
+
+/* Hover para los botones */
+.complete-btn:hover, .delete-btn:hover {
+    background-color: white;
+    color: darkmagenta;
+    border: 1px solid darkmagenta;
+}
+
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .task-manager {
+        padding: 0.5rem; /* Menos espacio en los márgenes */
+        max-width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+    }
+
+    input[type="text"] {
+        width: calc(100% - 70px); /* Ajuste en el tamaño del input para adaptarse a pantallas pequeñas */
+    }
+
+    button {
+        width: 100%; /* El botón ocupa todo el ancho disponible en móviles */
+        padding: 1rem; /* Aumentar el tamaño del botón */
+    }
+
+    li {
+        flex-direction: column; /* Organizar los elementos en columnas */
+        align-items: flex-start; /* Alineación a la izquierda */
+        padding: 1rem; /* Más espacio dentro de cada tarea */
+    }
+
+    .complete-btn, .delete-btn {
+        width: 30px; /* Tamaño más pequeño para los botones */
+        height: 30px; /* Tamaño más pequeño */
+        font-size: 0.7rem; /* Fuente más pequeña */
+    }
+}
+
+/* Estilo para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .task-manager {
+        padding: 1rem;
+        max-width: 80%; /* Ocupa el 80% del ancho en tabletas */
+    }
+
+    input[type="text"] {
+        width: calc(100% - 90px); /* Ajuste de tamaño para tabletas */
+    }
+
+    button {
+        padding: 0.7rem 1rem;
+    }
+
+    li {
+        flex-direction: row; /* Los elementos siguen en una fila */
+        justify-content: space-between; /* Espaciado entre los elementos */
+    }
+
+    .complete-btn, .delete-btn {
+        width: 35px; /* Tamaño estándar */
+        height: 35px; /* Tamaño estándar */
+        font-size: 0.8rem;
+    }
+}
+

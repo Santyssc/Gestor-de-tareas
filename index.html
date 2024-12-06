@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestores de tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestores de tareas</h1>
+    </header>
+
+    <main>
+        <div class="task-manager">
+            <p>
+                <label for="taskInput">Tarea</label>
+            </p>
+            <p>
+                <input type="text" id="taskInput" placeholder="Escribe una tarea">
+            </p>
+            <button id="addTaskButton">Agregar Tarea</button>
+            <ul id="taskList"></ul>
+            <h3>Tareas Completadas</h3>
+            <ul id="completedTaskList"></ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
